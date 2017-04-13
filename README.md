@@ -27,7 +27,7 @@ Lights:
 3. Adjust the HC-SR501 Time Delay to 3 second (described in link above). 
 4. Set the HC-SR501 Trigger Mode to *Repeatable Trigger* (described in link above). 
 5. Connect the following pins (Power, Gound, Data Out) on HC-SR501 to the Arduino.
-  * ![](/img/PIRSensor_bb.jpg?raw=true "HC-SR501 Wiring")
+![](/img/PIRSensor_bb.jpg?raw=true "HC-SR501 Wiring")
 
 ## Usage
 
