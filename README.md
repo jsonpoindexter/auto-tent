@@ -26,8 +26,8 @@ Lights:
 2. Adjust the HC-SR501 PIR Range as needed. Described [here](http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-hc-sr501-motion-sensor-tutorial/). **Current development testing at 3m**
 3. Adjust the HC-SR501 Time Delay to 3 second (described in link above). 
 4. Set the HC-SR501 Trigger Mode to *Repeatable Trigger* (described in link above). 
-5. Connect the following pins on HC-SR501 Output pin to Pin 8 on the Arduino.
-  * TODO: Diagram
+5. Connect the following pins (Power, Gound, Data Out) on HC-SR501 to the Arduino.
+![](/img/PIRSensor_bb.jpg?raw=true "HC-SR501 Wiring")
 
 ## Usage
 
