@@ -10,13 +10,14 @@
 CRGB leds[NUM_LEDS];
 
 int color = CRGB::White;
+int fadeSpeed = 1; //how fast to fade from Black to MAX_BRIGHTNESS
 
 // HC-SR501 Motion Detector setup
 int ledPin = 13;  // LED on Pin 13 of Arduino
 int pirPin = 8; // Input for HC-S501
 int motionDetected; // Place to store read PIR Valu
 int detectionBlock = 3000; // motion sensor is not able to detect for 3 seconds
-int noMotionPeriod = 10000 + detectionBlock; // how many second to wait while no motion is detected befor fading out lights
+int noMotionPeriod = 10000 + detectionBlock; // how many second to wait while no motion is detected before fading out lights
 long previousMillis = 0;        // will store last time LED was updated
 bool timeOutReached = true;
 
@@ -27,10 +28,11 @@ void setup() {
   delay( 3000 ); // power-up safety delay
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
   FastLED.setBrightness(  MAX_BRIGHTNESS );
+  FastLED.show();
   
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
-
+  Serial.println("Starting sketch...");
   //initialize motion sensor
   pinMode(ledPin, OUTPUT);
   pinMode(pirPin, INPUT);
@@ -76,7 +78,6 @@ void loop() {
 
 void turnOnLeds(){
   Serial.println("Turn LEDs ON");
-  int fadeSpeed = 1; //how fast to fade from Black to MAX_BRIGHTNESS
   for(int brightness = 1; brightness <= MAX_BRIGHTNESS; brightness++){
     for( int i = 0; i < NUM_LEDS; i++) {
       leds[i] = color; 
@@ -90,9 +91,10 @@ void turnOnLeds(){
 
 void turnOffLeds(){
   Serial.println("Turn LEDs OFF");
-  for( int i = 0; i < NUM_LEDS; i++) {
-    // Dim a color by 25% (64/256ths)
-    // eventually fading to full black
-    leds[i].fadeToBlackBy( 64 );
+  for(int brightness = MAX_BRIGHTNESS; brightness >= 0; brightness--){
+    FastLED.setBrightness( brightness );
+    Serial.println(brightness);
+    FastLED.show();
+    delay( (fadeSpeed * 1000) / MAX_BRIGHTNESS );
   }
 }
