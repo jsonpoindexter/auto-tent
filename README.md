@@ -5,8 +5,8 @@ Auotmate a camping tent.
 Automation features:
 1. Lights
 
-    Demo: 
-    <a href="http://www.youtube.com/watch?feature=player_embedded&v=bbWn63K64jY" target="_blank"><img src="http://img.youtube.com/vi/bbWn63K64jY/0.jpg" alt="Motion activated WS2811 LEDs" width="240" height="180" border="10" /></a>
+    Demo Video of Motion activated WS2811 LEDs:  
+    [![Motion activated WS2811 LEDs](https://img.youtube.com/vi/bbWn63K64jY/0.jpg)](https://www.youtube.com/watch?v=bbWn63K64jY "Motion activated WS2811 LEDs")
 
 ## Required Materials
 *Purchasing links can be found in the Purchasing section*
