@@ -6,7 +6,7 @@ Automation features:
 1. Lights
 
     Demo: 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bbWn63K64jY" frameborder="0" allowfullscreen></iframe>
+    <a href="http://www.youtube.com/watch?feature=player_embedded&v=bbWn63K64jY" target="_blank"><img src="http://img.youtube.com/vi/bbWn63K64jY/0.jpg" alt="Motion activated WS2811 LEDs" width="240" height="180" border="10" /></a>
 
 ## Required Materials
 *Purchasing links can be found in the Purchasing section*
@@ -14,7 +14,7 @@ Automation features:
 * [Arduino](https://www.arduino.cc/)
 * [HC-SR501](http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-hc-sr501-motion-sensor-tutorial/) Motion Sensor
 * WS2811/12 LEDs (I suggest 12mm diffused)
-* [Battery Pack](https://www.amazon.com/Anker-bar-Sized-Portable-High-Speed-Technology/dp/B00P7N0320/ref=sr_1_4?s=wireless&ie=UTF8&qid=1492446490&sr=1-4&keywords=battery+pack)
+* 5v Battery Pack
 
 ## Installation
 
@@ -39,11 +39,16 @@ TODO: Write usage instructions
 5. Submit a pull request :D
 
 ## Purchasing
+
+* Battery Pack
+  
+  * [Amazon](https://www.amazon.com/Anker-bar-Sized-Portable-High-Speed-Technology/dp/B00P7N0320/ref=sr_1_4?s=wireless&ie=UTF8&qid=1492446490&sr=1-4&keywords=battery+pack)
+
 * HC-SR501
   * I have had good results with: [AliExpress](https://www.aliexpress.com/item/Free-Shipping-HC-SR501-Adjust-Infrared-IR-Pyroelectric-Infrared-PIR-module-Motion-Sensor-Detector-Module-We/32501142074.html?spm=2114.13010608.0.0.bWSciv)
   Expect 20-30 day delivery time.
 * WS2811 12mm Diffused
-  [AliExpress](https://www.aliexpress.com/item/50PCS-lots-DC5V-12V-WS2811-WS2801-RGB-IC-led-pixel-module-12mm-Digital-Full-Color-Independently/32676844336.html?ws_ab_test=searchweb0_0,searchweb201602_5_10152_10065_10151_10068_10130_5100014_10136_10137_10060_10138_10062_10156_10056_10055_10054_10059_10099_10103_10102_10096_10148_10147_10052_10053_10142_10107_10050_10143_10051_10084_10083_10080_10082_10081_10178_10110_10111_10112_10113_10114_10037_10033_10032_10078_10079_10077_10073_10070_10123_10124-10051_10032_10033_10037,searchweb201603_1,afswitch_1,ppcSwitch_5&btsid=727712c8-1875-4d5e-bb8c-2c302d7a7b2b&algo_expid=87d2cb21-1d25-4b93-bd79-6397482fb75d-10&algo_pvid=87d2cb21-1d25-4b93-bd79-6397482fb75d) **5v 2811**
+  * [AliExpress](https://www.aliexpress.com/item/50PCS-lots-DC5V-12V-WS2811-WS2801-RGB-IC-led-pixel-module-12mm-Digital-Full-Color-Independently/32676844336.html?ws_ab_test=searchweb0_0,searchweb201602_5_10152_10065_10151_10068_10130_5100014_10136_10137_10060_10138_10062_10156_10056_10055_10054_10059_10099_10103_10102_10096_10148_10147_10052_10053_10142_10107_10050_10143_10051_10084_10083_10080_10082_10081_10178_10110_10111_10112_10113_10114_10037_10033_10032_10078_10079_10077_10073_10070_10123_10124-10051_10032_10033_10037,searchweb201603_1,afswitch_1,ppcSwitch_5&btsid=727712c8-1875-4d5e-bb8c-2c302d7a7b2b&algo_expid=87d2cb21-1d25-4b93-bd79-6397482fb75d-10&algo_pvid=87d2cb21-1d25-4b93-bd79-6397482fb75d) **5v 2811**
   
 
 ## History
