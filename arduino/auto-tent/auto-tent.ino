@@ -1,19 +1,18 @@
 // auto-tent
 
-//FastLED Setup
+//FastLED Setup for WS2811/12 LEDs
 #include <FastLED.h>
-#define LED_PIN     5
-#define NUM_LEDS    50
-#define MAX_BRIGHTNESS  64
+#define LED_PIN     5  // Data Pin (sometimes labled DI)
+#define NUM_LEDS    50 // How many leds in your strip?
+#define MAX_BRIGHTNESS  64 // Max LED Brightness
 #define LED_TYPE    WS2811
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 
-int color = CRGB::White;
+int color = CRGB::White; // Color of WS2811/12 LEDs
 int fadeSpeed = 1; //how fast to fade from Black to MAX_BRIGHTNESS
 
 // HC-SR501 Motion Detector setup
-int ledPin = 13;  // LED on Pin 13 of Arduino
 int pirPin = 8; // Input for HC-S501
 int motionDetected; // Place to store read PIR Valu
 int detectionBlock = 3000; // motion sensor is not able to detect for 3 seconds
@@ -27,16 +26,17 @@ bool previousMotionState = LOW;
 void setup() {
   delay( 3000 ); // power-up safety delay
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
-  FastLED.setBrightness(  MAX_BRIGHTNESS );
+  FastLED.setBrightness(  MAX_BRIGHTNESS ); // Start the WS2811/12 LEDs on MAX Brightness
   FastLED.show();
   
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
   Serial.println("Starting sketch...");
-  //initialize motion sensor
-  pinMode(ledPin, OUTPUT);
-  pinMode(pirPin, INPUT);
-  digitalWrite(ledPin, LOW);
+  
+  pinMode(pirPin, INPUT); // initialize motion sensor
+  
+  pinMode(LED_BUILTIN, OUTPUT); // init the onboard LED
+  digitalWrite(LED_BUILTIN, LOW); // turn the onboard LED off
 }
 
 
@@ -46,7 +46,7 @@ void loop() {
   
   currentMotionState = digitalRead(pirPin);
   
-  digitalWrite(ledPin, currentMotionState);
+  digitalWrite(LED_BUILTIN, currentMotionState);
   
   if( ( currentMotionState != previousMotionState )  || ( (currentMotionState == LOW) && (!timeOutReached) ) ){
     if(currentMotionState == true){
